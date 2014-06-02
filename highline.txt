@@ -1,0 +1,19 @@
+Highline does:
+
+ 1. HighLine was designed to ease the tedious tasks of doing console input and output with low-level methods like gets() and puts().
+ 2. HighLine provides a robust system for requesting data from a user, without needing to code all the error checking and validation rules
+ 3. and without needing to convert the typed Strings into what your program really needs. .
+
+How to use:
+
+ 1. Type conversion for answers:
+
+    ask("Birthday?  ", Date)
+    ask("Interests?  (comma sep list)  ", lambda { |str| str.split(/,\s*/) })
+ 2. Reading passwords:
+
+    ask("Enter your password:  ") { |q| q.echo = false }
+    ask("Enter your password:  ") { |q| q.echo = "x" }
+ 3. ERb based output (with HighLine‘s ANSI color tools):
+
+    say("This should be <%= color('bold', BOLD) %>!")
